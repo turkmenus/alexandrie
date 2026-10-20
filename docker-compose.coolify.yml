@@ -37,6 +37,8 @@ services:
     networks:
       - exilelab-alexandrie-network
       - coolify
+    expose:
+      - "9000"
     healthcheck:
       test: ["CMD-SHELL", "nc -z localhost 9000 || exit 1"]
       interval: 30s
@@ -94,6 +96,8 @@ services:
     networks:
       - exilelab-alexandrie-network
       - coolify
+    expose:
+      - "8201"
     labels:
       - traefik.enable=true
       - traefik.http.routers.exilelab-alexandrie-api.rule=Host(`${API_DOMAIN}`)
@@ -119,6 +123,8 @@ services:
     networks:
       - exilelab-alexandrie-network
       - coolify
+    expose:
+      - "8200"
     labels:
       - traefik.enable=true
       - traefik.http.routers.exilelab-alexandrie.rule=Host(`${FRONTEND_DOMAIN}`)
