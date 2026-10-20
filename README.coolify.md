@@ -31,6 +31,8 @@ Gerekli değişkenler `.env.coolify.example` dosyasında listelenmiştir.
 ## Domain'ler
 
 - Frontend: `https://alexandrie.testedeli.online`
-- Backend API: `https://api.alexandrie.testedeli.online`
-- CDN / S3: `https://cdn.alexandrie.testedeli.online`
+- Backend API: `https://alexandrie-api.testedeli.online`
+- CDN / S3: `https://alexandrie-cdn.testedeli.online`
 - Cookie domain: `testedeli.online`
+
+> Not: Cloudflare ücretsiz wildcard SSL sertifikası (`*.testedeli.online`) sadece bir alt seviyeyi kapsadığı için, API ve CDN domain'leri `api.alexandrie...` yerine `alexandrie-api...` şeklinde tek seviyede tutulmuştur.
